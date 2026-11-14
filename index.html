@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Undertow</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <div id="compass">
+      <div id="compass-strip"></div>
+      <div id="compass-needle"></div>
+      <div id="compass-raft" title="Raft"></div>
+    </div>
+    <div id="toast"></div>
+    <div id="warning"></div>
+    <div id="crosshair"></div>
+    <div id="prompt"></div>
+    <div id="gauges">
+      <div id="o2">
+        <div class="gauge-label">O<sub>2</sub></div>
+        <div id="o2-bar"><div id="o2-fill"></div></div>
+        <div id="o2-text">45</div>
+      </div>
+      <div id="depth">
+        <div class="gauge-label">DEPTH</div>
+        <div><span id="depth-value">0</span><span class="unit"> m</span></div>
+        <div id="depth-rating"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="vignette"></div>
+  <div id="fade"></div>
+
+  <div id="overlay">
+    <div class="panel">
+      <h1>UNDERTOW</h1>
+      <p class="tagline">A quiet dive into a deepening sea.</p>
+      <div id="overlay-action">Click to dive</div>
+      <table class="controls">
+        <tr><td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></td><td>Swim</td></tr>
+        <tr><td>Mouse</td><td>Look</td></tr>
+        <tr><td><kbd>Space</kbd> / <kbd>C</kbd></td><td>Rise / sink</td></tr>
+        <tr><td><kbd>Shift</kbd></td><td>Speed burst (uses more air)</td></tr>
+        <tr><td><kbd>Esc</kbd></td><td>Pause</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
